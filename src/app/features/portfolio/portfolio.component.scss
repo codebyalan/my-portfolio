@@ -1,0 +1,173 @@
+.portfolio-container {
+  font-family: "Rubik", serif;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 139, 139, 0.189);
+  position: relative;
+  .wrapper {
+    position: absolute;
+    width: calc(100vw - 350px);
+    // width: 100%;
+    // margin-left: 350px;
+    height: 100%;
+    // background-color: darkslategrey;
+    // overflow: hidden;
+
+    .slides {
+
+      width: 200%;
+      height: 200%;
+      position: fixed;
+      .slide {
+        position: absolute;
+        width: 50%;
+        height: 50%;
+      }
+      .one {
+        // background-color: cornflowerblue;
+        // padding-left: 350px;
+        
+      }
+      
+      .two {
+        // background-color: rgb(255, 30, 30);
+        background-color: rgba(0, 12, 139, 0.189);
+        -webkit-transform: translate(0%, 100%);
+        -ms-transform: translate(0%, 100%);
+        transform: translate(0%, 100%);
+      }
+
+      .three {
+        // background-color: khaki;
+        -webkit-transform: translate(100%, 100%);
+        -ms-transform: translate(100%, 100%);
+        transform: translate(100%, 100%);
+        background-color: rgba(139, 32, 0, 0.189);
+      }
+
+      .four {
+        // background-color: indianred;
+        -webkit-transform: translate(100%, 0%);
+        -ms-transform: translate(100%, 0%);
+        transform: translate(100%, 0%);
+      }
+    }
+  }
+}
+
+.profile-card {
+  position: fixed;
+  height: 100vh;
+  width: 350px;
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+
+  .card-container {
+    padding: 10px;
+
+    .card-wrapper{
+      padding: 10px;
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 250px 200px;
+      background-color: #fff;
+      border-radius: 20px;
+
+      .image {
+        display: flex;
+        justify-content: center;
+        img{
+          width: 100%;
+          height: 250px;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+      }
+      .details { 
+
+        display: flex;
+        justify-content: space-between;  
+        flex-direction: column;
+        .name-details {
+          padding-left: 10px;
+        }
+        
+        span { 
+          
+          .name { 
+            font-size: 40px;
+            font-weight: 500;
+        letter-spacing: 2px;
+
+          }
+      
+          .job-position { 
+            transform: translateY(-4px);
+            opacity: .5;
+            font-size: 13px;
+
+            &:hover{
+              opacity: 1;
+            }
+
+          }
+      
+          .location-contact {
+            .location, .email { 
+              opacity: .5;
+              display: flex;
+              flex-direction: row;
+              gap: 5px;
+              .icon { 
+                svg {
+                  width: 15px;
+                  
+                }
+              }
+              .d-text { 
+                color: black;
+                font-size: 13px;
+                a{
+                  color: black;
+                }
+              }
+              &:hover{
+                opacity: 1;
+              }
+            }
+            
+          }
+
+          .hire-button{
+            display: none;
+          }
+
+          .social-links {
+            display: flex;
+            flex-direction: row;
+            padding-right: 10px;
+            gap: 5px;
+            svg {
+              width: 20px;
+              opacity: .5;
+
+              &:hover{
+                opacity: 1;
+              }
+            }
+          }
+        }
+
+        .social {
+          display: flex;
+          width: 100%;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}
